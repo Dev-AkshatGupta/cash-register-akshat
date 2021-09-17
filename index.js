@@ -4,13 +4,15 @@ const checkButton=document.querySelector("#check-button");
 const message = document.querySelector("#error-message");
 const availableNotes = [2000,500,100,20,5,1];
 const noOfNotes=document.querySelector(".no-of-notes");
-
+var a =parseInt(cashGiven.value);
+var b =parseInt(billAmount.value);
 checkButton.addEventListener("click",function validateBillAndCashAmount(){
-    //  message.style.display="none";
-      if(billAmount.value>0){
-  if(cashGiven.value>=billAmount.value){
-  //const cashToBeReturned=cashGiven.value-billAmount.value;
-  //calculateChange(cashToBeReturned);
+    message.style.display="none";
+  
+      if(b>0){
+  if(a>=b){
+  const cashToBeReturned=a-b;
+  calculateChange(cashToBeReturned);
   }
   else{
   showMessage("the cash provided should be atleast equal to bill amount");
