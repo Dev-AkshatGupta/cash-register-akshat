@@ -1,5 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills&display=swap');
+:root{
+  --primary-color:#EC4899;
+  --light-pink:#FCE7F3;
+}
+body{
+  font-family: 'Stick No Bills', sans-serif;
+}
 .container{
-display: flex;
-flex-direction: column;
-width: 50vw;
+  text-align: center;
+  background-color: var(--light-pink);
+ padding: left 1rem;
+padding-right: 1rem;
+ max-width: 600px;
+ margin:auto;
+  
+}
+.heading{
+  text-align:center;
+padding-top: 1rem;
+  }
+#check-button{
+  border-color: var(--light-pink);
+  font-weight: bold;
+}
+.change-table{
+  text-align: center;
+  margin:auto;
+  border: var(--primary-color);
+
+}
+#error-message{
+  padding-top: 2px;
+  font-size: large;
+  font-weight: bold;
 }
