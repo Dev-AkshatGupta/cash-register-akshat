@@ -34,3 +34,33 @@ padding-top: 1rem;
   font-size: large;
   font-weight: bold;
 }
+.footer{
+  background-color:var(--primary-color);
+  padding: 2rem 0rem;
+  text-align: center;
+  color: white;
+  border-top-right-radius: 1rem;
+}
+.footer .link{
+  color: white;
+}
+.footer ul{
+  padding-inline-start: 0px;
+}
+.footer .footer-header{
+  font-weight: bold;
+  font-size: large;
+}
+
+.non-bullet-list{
+  list-style:none;
+}
+.list-item-inline{
+  display: inline;
+  padding: 0rem .05rem;
+}
+.link
+{
+    text-decoration: none;
+    padding: .5rem 1rem ;
+}
