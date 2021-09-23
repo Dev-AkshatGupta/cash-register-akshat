@@ -11,26 +11,34 @@ checkButton.addEventListener("click",function validateBillAndCashAmount(){
 //console.log(cashRecd);
 var cashRecd =parseInt(cashGiven.value);
 var billAmt =parseInt(billAmount.value);
-console.log(Number(cashGiven.value));
+if(!cashRecd ||!billAmt){
+showMessage("Please fill all the inputs");
+}
+else{
+  
     message.style.display="none";
   
-      if(billAmt>0){
+      if(cashRecd<0|| billAmt<0){
           
-  if(cashRecd>=billAmt){
-    console.log("hello");
-    const cashToBeReturned=cashRecd-billAmt;
-  calculateChange(cashToBeReturned);
-  }
-  else{
-    console.log("hell");
-  showMessage("the cash provided should be atleast equal to bill amount");
-  }
-      
+        showMessage("bill amount cant be negative , neither the cash recieved can be negative");
   }
       else{
-         showMessage("bill amount cant be negative");
+        if(cashRecd>=billAmt){
+    
+          const cashToBeReturned=cashRecd-billAmt;
+        calculateChange(cashToBeReturned);
+        }
+        else{
+          
+        showMessage("the cash provided should be atleast equal to bill amount");
+        }
+               
       }
-  });
+  };
+  })
+
+
+    
   function showMessage(msg)
   {
 
